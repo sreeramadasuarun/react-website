@@ -15,7 +15,7 @@ const Portfolio = () => {
         <div className="projects-grid">
           <a
             href="https://www.behance.net/gallery/140535431/wedly"
-            target="_blank"
+            target="blank"
             className="project project-tile one"
           >
             <img
@@ -27,7 +27,7 @@ const Portfolio = () => {
           </a>
           <a
             href="https://www.behance.net/gallery/119372981/Astroiyer"
-            target="_blank"
+            target="blank"
             className="project project-tile two"
           >
             <img
@@ -39,7 +39,7 @@ const Portfolio = () => {
           </a>
           <a
             href="https://www.behance.net/gallery/118469839/TruGated"
-            target="_blank"
+            target="blank"
             className="project project-tile three"
           >
             <img
@@ -51,7 +51,7 @@ const Portfolio = () => {
           </a>
           <a
             href="https://www.behance.net/gallery/61476577/Dchicks"
-            target="_blank"
+            target="blank"
             className="project project-tile four"
           >
             <img
@@ -63,7 +63,7 @@ const Portfolio = () => {
           </a>
           <a
             href="https://www.behance.net/gallery/118469135/Trumarket-Home-page"
-            target="_blank"
+            target="blank"
             className="project project-tile five"
           >
             <img
@@ -75,7 +75,7 @@ const Portfolio = () => {
           </a>
           <a
             href="https://www.behance.net/gallery/162631281/7vachan-wedshop"
-            target="_blank"
+            target="blank"
             className="project project-tile six"
           >
             <img
@@ -90,7 +90,7 @@ const Portfolio = () => {
         <a
           href="https://www.behance.net/sreeramadasuarun"
           className="btn btn-show-all"
-          target="_blank"
+          target="blank"
         >
           Show all<i className="fa fa-chevron-right"></i>
         </a>
@@ -104,7 +104,7 @@ const Portfolio = () => {
         <div className="contact-links">
           <a
             href="https://www.linkedin.com/in/sreeramadasu-arun-7171621b7/"
-            target="_blank"
+            target="blank"
             className="sociallinks contact-details"
           >
             <i className="fa fa-linkedin"></i> Linkedin
@@ -112,7 +112,7 @@ const Portfolio = () => {
           <a
             id="profile-link"
             href="https://github.com/sreeramadasuarun"
-            target="_blank"
+            target="blank"
             className="sociallinks contact-details"
           >
             <i className="fa fa-github"></i> GitHub
