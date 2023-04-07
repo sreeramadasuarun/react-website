@@ -32,7 +32,7 @@ const Navlinks = () => {
           </li>
 
           <li>
-            <a href="#" className="desktop-item">
+            <a to="*" className="desktop-item">
               Work +
             </a>
             <input type="checkbox" id="showMega" />
