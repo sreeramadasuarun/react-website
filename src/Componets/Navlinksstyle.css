@@ -45,6 +45,9 @@ nav .wrapper {
   font-weight: 600;
   text-decoration: none;
 }
+.logo a {
+  cursor: pointer;
+}
 .wrapper .nav-links {
   display: inline-flex;
 }
@@ -148,20 +151,20 @@ nav .wrapper {
 .row .mega-links li a:hover {
   color: #f2f2f2;
 }
-.wrapper .btn {
+.wrapper .close-open-button {
   color: #fff;
   font-size: 20px;
   cursor: pointer;
   display: none;
 }
-.wrapper .btn.close-btn {
+.wrapper .close-open-button.close-btn {
   position: absolute;
   right: 30px;
   top: 10px;
 }
 
 @media screen and (max-width: 970px) {
-  .wrapper .btn {
+  .wrapper .close-open-button {
     display: block;
   }
   .wrapper .nav-links {
@@ -192,10 +195,10 @@ nav .wrapper {
   #menu-btn:checked ~ .nav-links {
     left: 0%;
   }
-  #menu-btn:checked ~ .btn.menu-btn {
+  #menu-btn:checked ~ .close-open-button.menu-btn {
     display: none;
   }
-  #close-btn:checked ~ .btn.menu-btn {
+  #close-btn:checked ~ .close-open-button.menu-btn {
     display: block;
   }
   .nav-links li {

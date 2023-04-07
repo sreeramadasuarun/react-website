@@ -39,7 +39,7 @@
 }
 
 .welcome-section > p {
-  font-size: 3rem;
+  font-size: 3vw;
   font-weight: 200;
   font-style: italic;
   color: var(--main-white);

@@ -18,13 +18,13 @@ const Navlinks = () => {
     <nav>
       <div className="wrapper">
         <div className="logo">
-          <a href="/"> Sreeramadasu Arun</a>
+          <a href="/">Sreeramadasu Arun</a>
         </div>
         <input type="radio" name="slider" id="menu-btn" />
         <input type="radio" name="slider" id="close-btn" />
         <ul className="nav-links">
-          <label className="btn close-btn">
-            <i className="fas fa-times"></i>
+          <label htmlFor="close-btn" className="close-open-button close-btn">
+            <i className="fa fa-times"></i>
           </label>
 
           <li>
@@ -32,11 +32,13 @@ const Navlinks = () => {
           </li>
 
           <li>
-            <a to="/" className="desktop-item">
+            <a href="*" className="desktop-item">
               Work +
             </a>
             <input type="checkbox" id="showMega" />
-            <label className="mobile-item">Work</label>
+            <label htmlFor="showMega" className="mobile-item">
+              Work +
+            </label>
             <div className="mega-box">
               <div className="content">
                 <div className="row">
@@ -65,16 +67,16 @@ const Navlinks = () => {
                   <header>sreeramadasuarun@gmail.com</header>
                   <ul className="mega-links">
                     <li>
-                      <a href="#">lorem</a>
+                      <NavLink to="*">lorem</NavLink>
                     </li>
                     <li>
-                      <a href="#">lorem</a>
+                      <NavLink to="*">lorem</NavLink>{" "}
                     </li>
                     <li>
-                      <a href="#">lorem</a>
+                      <NavLink to="*">lorem</NavLink>{" "}
                     </li>
                     <li>
-                      <a href="#">lorem</a>
+                      <NavLink to="*">lorem</NavLink>{" "}
                     </li>
                   </ul>
                 </div>
@@ -82,16 +84,16 @@ const Navlinks = () => {
                   <header>8008372144</header>
                   <ul className="mega-links">
                     <li>
-                      <a href="#">lorem</a>
+                      <NavLink to="*">lorem</NavLink>{" "}
                     </li>
                     <li>
-                      <a href="#">lorem</a>
+                      <NavLink to="*">lorem</NavLink>{" "}
                     </li>
                     <li>
-                      <a href="#">lorem</a>
+                      <NavLink to="*">lorem</NavLink>{" "}
                     </li>
                     <li>
-                      <a href="#">lorem</a>
+                      <NavLink to="*">lorem</NavLink>{" "}
                     </li>
                   </ul>
                 </div>
@@ -99,30 +101,35 @@ const Navlinks = () => {
             </div>
           </li>
           <li>
-            {user ? (
-              <NavLink onClick={logout} to="/Logout">
-                Logout
-              </NavLink>
-            ) : (
-              <NavLink to="/Login">Login +</NavLink>
-            )}
+            <div className="desktop-item">
+              {user ? (
+                <NavLink onClick={logout} to="/Logout">
+                  Logout
+                </NavLink>
+              ) : (
+                <NavLink to="/Login">Login +</NavLink>
+              )}
+            </div>
+
             <input type="checkbox" id="showDrop" />
-            <label className="mobile-item">Dropdown Menu</label>
+            <label htmlFor="showDrop" className="mobile-item">
+              Login +
+            </label>
             <ul className="drop-menu">
               <li>
-                <a href="#">Sign In</a>
+                <NavLink to="/">Sign In</NavLink>
               </li>
               <li>
-                <a href="#">Sign Up</a>
+                <NavLink to="/">Sign Up</NavLink>
               </li>
               <li>
-                <a href="#">Login With Google</a>
+                <NavLink to="/">Login With Google</NavLink>
               </li>
             </ul>
           </li>
         </ul>
-        <label className="btn menu-btn">
-          <i className="fas fa-bars"></i>
+        <label htmlFor="menu-btn" className="close-open-button menu-btn">
+          <i className="fa fa-bars"></i>
         </label>
       </div>
     </nav>
