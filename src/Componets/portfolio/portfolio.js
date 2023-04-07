@@ -107,7 +107,7 @@ const Portfolio = () => {
             target="_blank"
             className="sociallinks contact-details"
           >
-            <i class="fa fa-linkedin"></i> Linkedin
+            <i className="fa fa-linkedin"></i> Linkedin
           </a>
           <a
             id="profile-link"
@@ -115,14 +115,14 @@ const Portfolio = () => {
             target="_blank"
             className="sociallinks contact-details"
           >
-            <i class="fa fa-github"></i> GitHub
+            <i className="fa fa-github"></i> GitHub
           </a>
 
           <a
             href="https://www.behance.net/sreeramadasuarun"
             className="sociallinks contact-details"
           >
-            <i class="fa fa-behance"></i> Behance
+            <i className="fa fa-behance"></i> Behance
           </a>
         </div>
       </section>
