@@ -1,0 +1,48 @@
+@media screen and (min-width: 768px) {
+  .drinks-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+.usercard {
+  background-color: rgb(165, 200, 244);
+  padding: 40px;
+  color: rgb(6, 6, 79);
+}
+
+.userson {
+  display: grid;
+  grid-template-columns: 2fr;
+}
+
+.allusercard a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+  .userson {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.drinks-container a {
+  text-decoration: none;
+}
+
+.drinks-container p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.drinklist img {
+  border: 2px solid rgb(139, 137, 137);
+  border-radius: 4px;
+  padding: 5px;
+  width: 750px;
+  height: 300px;
+}

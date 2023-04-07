@@ -1,0 +1,11 @@
+.about-para {
+  width: 90%;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+  /* margin-top: 2rem; */
+  position: relative;
+  top: 3.9rem;
+  /* background-color: blue; */
+}
