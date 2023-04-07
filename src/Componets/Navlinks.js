@@ -2,11 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../Componets/Navlinksstyle.css";
 import { useAuth } from "../login/auth";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import myimage from "../assets/images/myimage.jpg";
 
 const Navlinks = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const { user, logout } = useAuth();
 
