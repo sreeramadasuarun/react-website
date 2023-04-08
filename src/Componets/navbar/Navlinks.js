@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../Componets/Navlinksstyle.css";
-import { useAuth } from "../login/auth";
+import "../navbar/Navlinksstyle.css";
+import { useAuth } from "../../login/auth.js";
 // import { useNavigate } from "react-router-dom";
-import myimage from "../assets/images/myimage.jpg";
+import myimage from "../../assets/images/myimage.jpg";
 
 const Navlinks = () => {
   // const navigate = useNavigate();
@@ -48,15 +48,13 @@ const Navlinks = () => {
                   <header>Arun Sreeramadasu</header>
                   <ul className="mega-links">
                     <li>
-                      <NavLink to="/users"> User </NavLink>
+                      <NavLink to="/Shop">Shop Site</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/Projects" className="active1">
-                        Projects
-                      </NavLink>
+                      <NavLink to="*">lorem</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/About"> About </NavLink>
+                      <NavLink to="*">lorem</NavLink>
                     </li>
                     <li>
                       <NavLink to="/Drinks"> Drinks </NavLink>
@@ -70,13 +68,13 @@ const Navlinks = () => {
                       <NavLink to="*">lorem</NavLink>
                     </li>
                     <li>
-                      <NavLink to="*">lorem</NavLink>{" "}
+                      <NavLink to="*">lorem</NavLink>
                     </li>
                     <li>
-                      <NavLink to="*">lorem</NavLink>{" "}
+                      <NavLink to="*">lorem</NavLink>
                     </li>
                     <li>
-                      <NavLink to="*">lorem</NavLink>{" "}
+                      <NavLink to="*">lorem</NavLink>
                     </li>
                   </ul>
                 </div>
@@ -84,16 +82,19 @@ const Navlinks = () => {
                   <header>8008372144</header>
                   <ul className="mega-links">
                     <li>
-                      <NavLink to="*">lorem</NavLink>{" "}
+                      <NavLink to="*">lorem</NavLink>
+                    </li>
+
+                    <li>
+                      <NavLink to="/users"> User </NavLink>
                     </li>
                     <li>
-                      <NavLink to="*">lorem</NavLink>{" "}
+                      <NavLink to="/Projects" className="active1">
+                        Projects
+                      </NavLink>
                     </li>
                     <li>
-                      <NavLink to="*">lorem</NavLink>{" "}
-                    </li>
-                    <li>
-                      <NavLink to="*">lorem</NavLink>{" "}
+                      <NavLink to="/About"> About </NavLink>
                     </li>
                   </ul>
                 </div>

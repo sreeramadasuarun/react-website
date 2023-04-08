@@ -1,0 +1,89 @@
+.card {
+  background-color: var(--clr-white);
+  text-align: center;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 1rem;
+  border-radius: 44px;
+  max-width: 22rem;
+  min-height: 100%;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.cardcon {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.allcard a {
+  text-decoration: none;
+}
+
+.allcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem;
+}
+
+@media screen and (max-width: 697px) {
+  .cardcon {
+    display: grid;
+    grid-template-columns: 2fr;
+  }
+}
+
+.right-left {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  font-size: 0.9rem;
+  justify-content: space-between;
+}
+
+.image {
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  mix-blend-mode: multiply;
+}
+
+img {
+  border-radius: 1rem;
+  text-align: center;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.bold {
+  font-weight: 900;
+}
+.button-filters {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+input[type="text"],
+select,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
