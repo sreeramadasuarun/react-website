@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 const Drinkslist = () => {
   const [drinkdata, setdrinkdata] = useState([]);
   console.log(drinkdata);
@@ -13,17 +12,17 @@ const Drinkslist = () => {
   };
 
   useEffect(() => {
-    fetchdrinks(url);
+    fetchdrinks("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=");
   }, []);
 
   console.log(drinkdata);
 
-  const { coolid } = useParams([]);
+  const { cooldrink } = useParams([]);
 
   const Drinkslistdata = drinkdata.find((each) => {
-    return each.idDrink === coolid;
+    return each.idDrink === cooldrink;
   });
-  console.log(coolid);
+  console.log(cooldrink);
   console.log(Drinkslistdata);
 
   return (
