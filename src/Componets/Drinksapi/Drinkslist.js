@@ -12,7 +12,9 @@ const Drinkslist = () => {
   };
 
   useEffect(() => {
-    fetchdrinks("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=");
+    fetchdrinks(
+      "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + cooldrink
+    );
   }, []);
 
   console.log(drinkdata);
