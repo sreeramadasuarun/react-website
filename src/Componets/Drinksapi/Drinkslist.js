@@ -12,9 +12,7 @@ const Drinkslist = () => {
   };
 
   useEffect(() => {
-    fetchdrinks(
-      "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + cooldrink
-    );
+    fetchdrinks("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=");
   }, []);
 
   console.log(drinkdata);
@@ -38,7 +36,7 @@ const Drinkslist = () => {
       </h3>
       <br />
       <h3>
-        strCategory:{" "}
+        strCategory:
         {Drinkslistdata ? Drinkslistdata.strCategory : "Loading..."}
       </h3>
       <br />

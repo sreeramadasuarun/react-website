@@ -41,7 +41,7 @@ nav .wrapper {
 }
 .wrapper .logo a {
   color: #f2f2f2;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -57,7 +57,7 @@ nav .wrapper {
 .nav-links li a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   padding: 9px 15px;
   border-radius: 5px;
@@ -136,7 +136,7 @@ nav .wrapper {
 }
 .content .row .mega-links {
   margin-left: -40px;
-  border-left: 1px solid rgba(67, 66, 66, 0.09);
+  border-right: 1px solid rgba(67, 66, 66, 0.09);
 }
 .row .mega-links li {
   padding: 0 20px;
@@ -145,7 +145,7 @@ nav .wrapper {
   padding: 0px;
   padding: 0 20px;
   color: #5a5959;
-  font-size: 15px;
+  font-size: 13px;
   display: block;
 }
 .row .mega-links li a:hover {
@@ -153,7 +153,7 @@ nav .wrapper {
 }
 .wrapper .close-open-button {
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   display: none;
 }

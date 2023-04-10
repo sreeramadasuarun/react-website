@@ -1,12 +1,14 @@
 import React from "react";
-import "../portfolio/portfoliostyle.css";
+import "./portfoliostyle.css";
 
 const Portfolio = () => {
   return (
     <div className="portfolio-font">
       <section className="welcome-section">
         <h1>Hello I'm Arun</h1>
-        <p>UI/UX Web Graphic Designer and web developer</p>
+        <p>
+          UI/UX Web <span className="spin"></span>
+        </p>
       </section>
 
       <section id="projects" className="projects-section">

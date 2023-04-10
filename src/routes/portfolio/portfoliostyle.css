@@ -36,11 +36,12 @@
   max-width: 100vw;
   color: var(--main-white);
   background: linear-gradient(45deg, #a644f4, #6a02be, #b9334f);
+  gap: 1.5rem;
 }
 
 .welcome-section > p {
-  font-size: 3vw;
-  font-weight: 200;
+  font-size: 4vw;
+  font-weight: 400;
   font-style: italic;
   color: var(--main-white);
 }
@@ -167,11 +168,10 @@ footer {
   .nav-list {
     padding: 0.5rem;
   }
-  .welcome-section > p {
-    font-size: 3vw;
-  }
+
   h1 {
     padding-top: 4rem;
+    font-size: 2.7rem;
   }
   .projects-grid {
     display: grid;
@@ -184,5 +184,24 @@ footer {
   }
   .contact-links {
     justify-content: center;
+  }
+}
+
+.spin {
+  color: rgb(229, 255, 0);
+}
+.spin:after {
+  content: "";
+  animation: spin 3s linear infinite;
+  font-weight: 700;
+  text-decoration: underline;
+}
+@keyframes spin {
+  0% {
+    content: "Developer";
+  }
+
+  100% {
+    content: "Designer";
   }
 }

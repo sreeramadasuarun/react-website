@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import NavLink from "./Componets/navbar/Navlinks";
+import NavLink from "./routes/navbar/Navlinks";
 import { Authprovider } from "./login/auth";
 // import About from './Componets/About';
 import Success from "./Componets/tabs/Success";
@@ -16,7 +16,7 @@ import Drinkslist from "./Componets/Drinksapi/Drinkslist";
 import Login from "./login/Login";
 import Logout from "./login/Logout";
 import PrivateRoute from "./login/PrivateRoute";
-import Portfolio from "./Componets/portfolio/portfolio";
+import Portfolio from "./routes/portfolio/portfolio";
 import Shop from "./Componets/shopsite/shop.js";
 
 const Lazyabout = React.lazy(() => import("./Componets/tabs/About"));

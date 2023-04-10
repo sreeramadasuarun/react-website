@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../navbar/Navlinksstyle.css";
+import "./Navlinksstyle.css";
 import { useAuth } from "../../login/auth.js";
 // import { useNavigate } from "react-router-dom";
 import myimage from "../../assets/images/myimage.jpg";
