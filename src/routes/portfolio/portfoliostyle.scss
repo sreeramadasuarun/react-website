@@ -187,21 +187,66 @@ footer {
   }
 }
 
-.spin {
-  color: rgb(229, 255, 0);
+.typing {
+  color: rgb(251, 255, 20);
 }
-.spin:after {
+.typing:after {
   content: "";
-  animation: spin 3s linear infinite;
+  animation: typing 5s linear infinite;
   font-weight: 700;
   text-decoration: underline;
 }
-@keyframes spin {
+@keyframes typing {
   0% {
-    content: "Developer";
+    content: "<" "D" + "/>";
+  }
+  5% {
+    content: "<" "De" + "/>";
+  }
+  10% {
+    content: "<" "Des" + "/>";
+  }
+  15% {
+    content: "<" "Desi" + "/>";
+  }
+  20% {
+    content: "<" "Desig" + "/>";
+  }
+  25% {
+    content: "<" "Design" + "/>";
+  }
+  30% {
+    content: "<" "Designe" + "/>";
+  }
+  35% {
+    content: "<" "Designer" + "/>";
   }
 
-  100% {
-    content: "Designer";
+  40% {
+    content: "<" "D" + "/>";
+  }
+  45% {
+    content: "<" "De" + "/>";
+  }
+  50% {
+    content: "<" "Dev" + "/>";
+  }
+  55% {
+    content: "<" "Deve" + "/>";
+  }
+  60% {
+    content: "<" "Devel" + "/>";
+  }
+  65% {
+    content: "<" "Develo" + "/>";
+  }
+  70% {
+    content: "<" "Develop" + "/>";
+  }
+  75% {
+    content: "<" "Develope" + "/>";
+  }
+  80% {
+    content: "<" "Developer" + "/>";
   }
 }

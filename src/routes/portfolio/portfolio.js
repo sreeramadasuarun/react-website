@@ -1,5 +1,5 @@
 import React from "react";
-import "./portfoliostyle.css";
+import "./portfoliostyle.scss";
 
 const Portfolio = () => {
   return (
@@ -7,7 +7,7 @@ const Portfolio = () => {
       <section className="welcome-section">
         <h1>Hello I'm Arun</h1>
         <p>
-          UI/UX Web <span className="spin"></span>
+          UI/UX Web <span className="typing"></span>
         </p>
       </section>
 
