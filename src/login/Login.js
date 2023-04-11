@@ -1,34 +1,60 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "./auth";
+import * as Components from "./login.css.js";
+
+import "./login.css";
 
 const Login = () => {
-  const { login } = useAuth();
-  const [name, setname] = useState("");
-  const navigate = useNavigate();
+  const [signIn, toggle] = useState(true);
 
   return (
-    <div className="center">
-      <h1>Login</h1>
-      <label>Username</label>
+    <Components.FullContainer>
+      <Components.Container>
+        <Components.SignUpContainer signinIn={signIn}>
+          <Components.Form>
+            <Components.Title>Create Account</Components.Title>
+            <Components.Input type="email" placeholder="Email" />
+            <Components.Input type="password" placeholder="Password" />
+            <Components.Button>Sign Up</Components.Button>
+          </Components.Form>
+        </Components.SignUpContainer>
 
-      <input
-        type="text"
-        name="name"
-        id="name"
-        value={name}
-        onChange={(e) => setname(e.target.value)}
-        placeholder="enter username"
-      />
-      <button
-        onClick={() => {
-          login(name);
-          navigate("/About", { replace: true });
-        }}
-      >
-        Login
-      </button>
-    </div>
+        <Components.SignInContainer signinIn={signIn}>
+          <Components.Form>
+            <Components.Title>Sign in</Components.Title>
+            <Components.Input type="email" placeholder="Email" />
+            <Components.Input type="password" placeholder="Password" />
+            <Components.Anchor href="#">
+              Forgot your password?
+            </Components.Anchor>
+            <Components.Button>Sigin In</Components.Button>
+          </Components.Form>
+        </Components.SignInContainer>
+
+        <Components.OverlayContainer signinIn={signIn}>
+          <Components.Overlay signinIn={signIn}>
+            <Components.LeftOverlayPanel signinIn={signIn}>
+              <Components.Title>Welcome Back!</Components.Title>
+              <Components.Paragraph>
+                To keep connected with us please login with your personal info
+              </Components.Paragraph>
+              <Components.GhostButton onClick={() => toggle(true)}>
+                Sign In
+              </Components.GhostButton>
+            </Components.LeftOverlayPanel>
+
+            <Components.RightOverlayPanel signinIn={signIn}>
+              <Components.Title>Hello, Friend!</Components.Title>
+              <Components.Paragraph>
+                Enter Your personal details and start journey with us
+              </Components.Paragraph>
+              <Components.GhostButton onClick={() => toggle(false)}>
+                Sigin Up
+              </Components.GhostButton>
+            </Components.RightOverlayPanel>
+          </Components.Overlay>
+        </Components.OverlayContainer>
+      </Components.Container>
+    </Components.FullContainer>
   );
 };
 
