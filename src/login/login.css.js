@@ -82,6 +82,7 @@ export const Button = styled.button`
   font-size: 12px;
   font-weight: bold;
   padding: 12px 45px;
+  margin: 1rem 0;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
@@ -92,18 +93,40 @@ export const Button = styled.button`
     outline: none;
   }
 `;
+
+export const GoogleButton = styled.button`
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  background-color: #4285f4;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 45px;
+  margin: 1rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  &:active {
+    transform: scale(0.95);
+  }
+  &:focus {
+    outline: none;
+  }
+`;
+
 export const GhostButton = styled(Button)`
   background-color: transparent;
   border-color: #ffffff;
   cursor: pointer;
 `;
 
-export const Anchor = styled.a`
-  color: #333;
-  font-size: 14px;
-  text-decoration: none;
-  margin: 15px 0;
-`;
+// export const Anchor = styled.a`
+//   color: #333;
+//   font-size: 14px;
+//   text-decoration: none;
+//   margin: 15px 0;
+// `;
 export const OverlayContainer = styled.div`
   position: absolute;
   top: 0;

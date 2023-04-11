@@ -12,7 +12,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { logIn, googleSignIn } = useUserAuth();
+  const { logIn, googleSignIn, signUp } = useUserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -25,7 +25,7 @@ const Login = () => {
       setError(err.message);
     }
   };
-
+  //signin
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
     try {
@@ -35,15 +35,38 @@ const Login = () => {
       console.log(error.message);
     }
   };
+  //signup
+
+  const handleSignupSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await signUp(email, password);
+      navigate("/");
+    } catch (err) {
+      setError(err.message);
+    }
+  };
 
   return (
     <Components.FullContainer>
       <Components.Container>
-        <Components.SignUpContainer signinIn={signIn}>
+        <Components.SignUpContainer
+          onSubmit={handleSignupSubmit}
+          signinIn={signIn}
+        >
           <Components.Form>
             <Components.Title>Create Account</Components.Title>
-            <Components.Input type="email" placeholder="Email" />
-            <Components.Input type="password" placeholder="Password" />
+            <Components.Input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Components.Input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
             <Components.Button>Sign Up</Components.Button>
           </Components.Form>
         </Components.SignUpContainer>
@@ -62,14 +85,12 @@ const Login = () => {
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Components.Anchor href="#">
-              Forgot your password?
-            </Components.Anchor>
+            {/* <Components.Anchor to="#">Forgot your password?</Components.Anchor> */}
             <Components.Button>Sigin In</Components.Button>
 
-            <Components.Button onClick={handleGoogleSignIn}>
+            <Components.GoogleButton onClick={handleGoogleSignIn}>
               Sigin With Google
-            </Components.Button>
+            </Components.GoogleButton>
           </Components.Form>
         </Components.SignInContainer>
 
