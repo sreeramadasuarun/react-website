@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavLink from "./routes/navbar/Navlinks";
-import { Authprovider } from "./login/auth";
+import { UserAuthContextProvider } from "./login/UserAuthContext";
 // import About from './Componets/About';
 import Success from "./Componets/tabs/Success";
 import Notfound from "./Componets/tabs/404error";
@@ -23,7 +23,7 @@ const Lazyabout = React.lazy(() => import("./Componets/tabs/About"));
 
 const App = () => {
   return (
-    <Authprovider>
+    <UserAuthContextProvider>
       <NavLink />
 
       <Routes>
@@ -65,7 +65,7 @@ const App = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/Logout" element={<Logout />} />
       </Routes>
-    </Authprovider>
+    </UserAuthContextProvider>
   );
 };
 

@@ -1,19 +1,22 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navlinksstyle.css";
-import { useAuth } from "../../login/auth.js";
-// import { useNavigate } from "react-router-dom";
+import { useUserAuth } from "../../login/UserAuthContext";
 import myimage from "../../assets/images/myimage.jpg";
 
 const Navlinks = () => {
-  // const navigate = useNavigate();
+  const { user, logOut } = useUserAuth();
 
-  const { user, logout } = useAuth();
-
-  const data = useAuth();
+  const data = useUserAuth();
 
   console.log(data);
-
+  const handleSignOut = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <nav>
       <div className="wrapper">
@@ -104,7 +107,7 @@ const Navlinks = () => {
           <li>
             <div className="desktop-item">
               {user ? (
-                <NavLink onClick={logout} to="/Logout">
+                <NavLink onClick={handleSignOut} to="/Logout">
                   Logout
                 </NavLink>
               ) : (

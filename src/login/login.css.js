@@ -74,6 +74,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  cursor: pointer;
   border-radius: 20px;
   border: 1px solid #ff4b2b;
   background-color: #ff4b2b;
@@ -94,6 +95,7 @@ export const Button = styled.button`
 export const GhostButton = styled(Button)`
   background-color: transparent;
   border-color: #ffffff;
+  cursor: pointer;
 `;
 
 export const Anchor = styled.a`
