@@ -18,6 +18,7 @@ import Logout from "./login/Logout";
 import PrivateRoute from "./login/PrivateRoute";
 import Portfolio from "./routes/portfolio/portfolio";
 import Shop from "./Componets/shopsite/shop.js";
+import Test from "./test";
 
 const Lazyabout = React.lazy(() => import("./Componets/tabs/About"));
 
@@ -64,6 +65,7 @@ const App = () => {
 
         <Route path="/Login" element={<Login />} />
         <Route path="/Logout" element={<Logout />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </UserAuthContextProvider>
   );

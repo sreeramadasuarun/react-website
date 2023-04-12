@@ -3,13 +3,18 @@ import { NavLink } from "react-router-dom";
 import "./Navlinksstyle.css";
 import { useUserAuth } from "../../login/UserAuthContext";
 import myimage from "../../assets/images/myimage.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Navlinks = () => {
+  const navigate = useNavigate();
+  const { googleSignIn } = useUserAuth();
+
   const { user, logOut } = useUserAuth();
 
   const data = useUserAuth();
 
   console.log(data);
+  //logout
   const handleSignOut = async () => {
     try {
       await logOut();
@@ -17,6 +22,18 @@ const Navlinks = () => {
       console.log(error);
     }
   };
+
+  //signin
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      await googleSignIn();
+      navigate("/home");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <nav>
       <div className="wrapper">
@@ -32,6 +49,9 @@ const Navlinks = () => {
 
           <li>
             <NavLink to="/"> Portfolio </NavLink>
+          </li>
+          <li>
+            <NavLink to="/test"> test </NavLink>
           </li>
 
           <li>
@@ -121,13 +141,15 @@ const Navlinks = () => {
             </label>
             <ul className="drop-menu">
               <li>
-                <NavLink to="/">Sign In</NavLink>
+                <NavLink to="/Login">Sign In</NavLink>
               </li>
               <li>
-                <NavLink to="/">Sign Up</NavLink>
+                <NavLink to="/Login">Sign Up</NavLink>
               </li>
               <li>
-                <NavLink to="/">Login With Google</NavLink>
+                <NavLink onClick={handleGoogleSignIn}>
+                  Login With Google
+                </NavLink>
               </li>
             </ul>
           </li>

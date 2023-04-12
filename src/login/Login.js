@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import * as Components from "./login.css.js";
+import * as Components from "./login.style.js";
 import { useNavigate } from "react-router-dom";
 import { useUserAuth } from "../login/UserAuthContext.js";
-import { Alert } from "react-bootstrap";
-import "./login.css.js";
+import "./login.style.js";
+import "./login.style.css";
 
 const Login = () => {
   const [signIn, toggle] = useState(true);
@@ -68,11 +68,11 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <Components.Button>Sign Up</Components.Button>
+            {error && <p className="red-error">{error}</p>}
           </Components.Form>
         </Components.SignUpContainer>
 
         <Components.SignInContainer signinIn={signIn}>
-          {error && <Alert variant="danger">{error}</Alert>}
           <Components.Form onSubmit={handleSubmit}>
             <Components.Title>Sign in</Components.Title>
             <Components.Input
@@ -91,6 +91,7 @@ const Login = () => {
             <Components.GoogleButton onClick={handleGoogleSignIn}>
               Sigin With Google
             </Components.GoogleButton>
+            {error && <p className="red-error">{error}</p>}
           </Components.Form>
         </Components.SignInContainer>
 

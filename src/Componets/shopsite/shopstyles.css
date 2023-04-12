@@ -13,7 +13,13 @@
   background: #e0e0e0;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
-
+.shop-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--clr-white);
+  position: fixed;
+  z-index: -100;
+}
 .cardcon {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -29,7 +35,7 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  padding: 5rem;
+  padding: 4.5rem;
 }
 
 @media screen and (max-width: 697px) {
@@ -48,14 +54,14 @@
 }
 
 .image {
-  width: 10rem;
-  height: 10rem;
   text-align: center;
   mix-blend-mode: multiply;
 }
 
-img {
+.image img {
   border-radius: 1rem;
+  width: 10rem;
+  max-height: 10rem;
   text-align: center;
 }
 .left {

@@ -37,6 +37,8 @@ const Shop = () => {
   };
   return (
     <div className="allcard">
+      <div className="shop-background"></div>
+
       <form>
         <label>name: </label>
         <input
