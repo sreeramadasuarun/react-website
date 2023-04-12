@@ -174,7 +174,8 @@ nav .wrapper {
     max-width: 350px;
     top: 0;
     left: -100%;
-    background: #242526;
+    background: #0073ff;
+
     display: block;
     padding: 50px 10px;
     line-height: 50px;
@@ -280,7 +281,7 @@ nav .wrapper {
     margin: 0;
   }
   .content .row header {
-    font-size: 19px;
+    font-size: 13px;
   }
 }
 nav input {

@@ -15,12 +15,19 @@ export const Container = styled.div`
   overflow: hidden;
   width: 678px;
   max-width: 100%;
+
   min-height: 400px;
+  @media (max-width: 691px) {
+    width: 558px;
+    margin: 1rem;
+    min-height: 400px;
+  }
 `;
 
 export const SignUpContainer = styled.div`
   position: absolute;
   top: 0;
+
   height: 100%;
   transition: all 0.6s ease-in-out;
   left: 0;
@@ -56,8 +63,12 @@ export const Form = styled.form`
   justify-content: center;
   flex-direction: column;
   padding: 0 50px;
+
   height: 100%;
   text-align: center;
+  @media (max-width: 691px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -92,6 +103,10 @@ export const Button = styled.button`
   &:focus {
     outline: none;
   }
+  @media (max-width: 691px) {
+    font-size: 9px;
+    padding: 7px 20px;
+  }
 `;
 
 export const GoogleButton = styled.button`
@@ -112,6 +127,10 @@ export const GoogleButton = styled.button`
   }
   &:focus {
     outline: none;
+  }
+  @media (max-width: 691px) {
+    font-size: 8px;
+    padding: 7px 20px;
   }
 `;
 
@@ -170,6 +189,9 @@ export const OverlayPanel = styled.div`
   width: 50%;
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
+  @media (max-width: 691px) {
+    padding: 0 20px;
+  }
 `;
 
 export const LeftOverlayPanel = styled(OverlayPanel)`
