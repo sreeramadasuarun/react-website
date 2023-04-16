@@ -4,6 +4,8 @@ import "./Navlinksstyle.css";
 import { useUserAuth } from "../../login/UserAuthContext";
 import myimage from "../../assets/images/myimage.jpg";
 import { useNavigate } from "react-router-dom";
+// import { FaShoppingCart } from "react-icons/fa";
+import CartMenu from "../../shop.componets/Components/CartMenu/CartMenu";
 
 const Navlinks = () => {
   const navigate = useNavigate();
@@ -50,8 +52,9 @@ const Navlinks = () => {
           <li>
             <NavLink to="/"> Portfolio </NavLink>
           </li>
+
           <li>
-            <NavLink to="/test"> test </NavLink>
+            <NavLink to="/shopee">Shopee</NavLink>
           </li>
 
           <li>
@@ -152,6 +155,14 @@ const Navlinks = () => {
                 </NavLink>
               </li>
             </ul>
+          </li>
+          {/* <li>
+            <NavLink to="/">
+              cart <FaShoppingCart />
+            </NavLink>
+          </li> */}
+          <li>
+            <CartMenu />
           </li>
         </ul>
         <label htmlFor="menu-btn" className="close-open-button menu-btn">

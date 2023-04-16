@@ -37,10 +37,9 @@ const Shop = () => {
   };
   return (
     <div className="allcard">
-      <div className="shop-background"></div>
-
+      <div className="shop-background"> </div>
       <form>
-        <label>name: </label>
+        <label> name: </label>
         <input
           type="text"
           name="search"
@@ -57,13 +56,12 @@ const Shop = () => {
           click
         </button>
         <br />
-
         <button className="button-filters " onClick={handleSort}>
-          Sort by Price (
+          Sort by Price(
           {sortDirection === "asc" ? "Low to High" : "High to Low"})
         </button>
       </form>
-      <h1>shopping</h1>
+      <h1> shopping </h1>
       <div className="cardcon">
         {products.map(({ title, price, category, id, image }) => {
           return (
@@ -72,19 +70,19 @@ const Shop = () => {
                 <div className="image">
                   <img src={image} alt="noimage" />
                 </div>
-                <h3>{title.split(" ").slice(0, 2).join(" ")}</h3>
-
+                <h3> {title.split(" ").slice(0, 2).join(" ")} </h3>
                 <div className="right-left">
                   <div className="left">
-                    <span>price:</span>
-
-                    <span className="bold">{price}</span>
+                    <span> price: </span>
+                    <span className="bold"> {price} </span>
                   </div>
                   <div className="left">
-                    <span>category:</span>
-
-                    <span className="bold">{category}</span>
+                    <span> category: </span>
+                    <span className="bold"> {category} </span>
                   </div>
+                </div>
+                <div className="overlay">
+                  <button className="cart-btn">Add to Cart</button>
                 </div>
               </article>
             </div>

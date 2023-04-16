@@ -1,0 +1,151 @@
+@import "../../../App.scss";
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 2rem;
+  border-bottom: 1px solid $lightestGray;
+}
+.cart-item-img {
+  flex: 0 0 30%;
+  margin-bottom: 1rem;
+}
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-item-info {
+  flex: 0 0 70%;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.cart-item-info h3 {
+  margin-block-start: 0;
+  margin-block-end: 0em;
+  font-weight: 300;
+  cursor: pointer;
+}
+.cart-item-info p {
+  margin-block-start: 0;
+  margin-block-end: 0em;
+  font-weight: 300;
+  margin-top: 0.3rem;
+  color: $darkGray;
+}
+.addRemove {
+  margin-top: 0.6rem;
+}
+.addRemove-btn {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.2rem;
+  border-radius: 5px;
+  background-color: $darkGray;
+  color: #fff;
+  cursor: pointer;
+}
+.addRemove-btn:hover {
+  background-color: $cream;
+}
+.count {
+  margin: 0.5rem;
+}
+
+.cart-detail-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $lightestGray;
+}
+.img-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 0 100%;
+}
+.cart-detail-item-img {
+  flex: 0 0 30%;
+}
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.cart-detail-item-info {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+.cart-detail-item-info h3 {
+  font-size: 1rem;
+  color: $darkGray;
+  margin-block-start: 0;
+  margin-block-end: 0em;
+  font-weight: 500;
+}
+
+.addRemove-detail {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.addRemove-btn {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.2rem;
+  border-radius: 5px;
+  background-color: $darkGray;
+  color: #fff;
+  cursor: pointer;
+}
+.addRemove-btn:hover {
+  background-color: $cream;
+}
+
+.cart-detail-price {
+  margin-block-start: 0;
+  margin-block-end: 0em;
+  font-weight: 500;
+  color: $darkGray;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 450px) {
+  .cart-detail-item {
+    margin: 1rem 2rem 1rem 2rem;
+  }
+  .img-title {
+    flex: 0 0 60%;
+  }
+  .addRemove-detail {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+  .cart-detail-price {
+    margin-top: 0rem;
+  }
+  .table-title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 950px) {
+  .cart-detail-item-info h3 {
+    font-size: 1.1rem;
+  }
+  .img-title {
+    flex: 0 0 40%;
+  }
+  .cart-detail-item-img {
+    flex: 0 0 30%;
+  }
+}

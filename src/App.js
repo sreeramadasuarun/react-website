@@ -1,9 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import NavLink from "./routes/navbar/Navlinks";
 import { UserAuthContextProvider } from "./login/UserAuthContext";
-// import About from './Componets/About';
 import Success from "./Componets/tabs/Success";
 import Notfound from "./Componets/tabs/404error";
 import Projects from "./Componets/tabs/projects";
@@ -16,9 +15,12 @@ import Drinkslist from "./Componets/Drinksapi/Drinkslist";
 import Login from "./login/Login";
 import Logout from "./login/Logout";
 import PrivateRoute from "./login/PrivateRoute";
-import Portfolio from "./routes/portfolio/portfolio";
+import Portfolio from "./Componets/portfolio/portfolio";
 import Shop from "./Componets/shopsite/shop.js";
-import Test from "./test";
+import Shophome from "./shopee/Shopee";
+import Cart from "./shop.componets/Components/Cart/Cart";
+import Detail from "./shop.componets/Components/Detail/Detail";
+import CartDetail from "./shop.componets/Components/CartDetail/CartDetail";
 
 const Lazyabout = React.lazy(() => import("./Componets/tabs/About"));
 
@@ -26,11 +28,8 @@ const App = () => {
   return (
     <UserAuthContextProvider>
       <NavLink />
-
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<Portfolio />} />
-
         <Route
           path="/About"
           element={
@@ -41,16 +40,12 @@ const App = () => {
         />
         <Route path="/Success" element={<Success />} />
         <Route path="/Shop" element={<Shop />} />
-
         <Route path="/Projects" element={<Projects />}>
           <Route path="Featuredproject" element={<Featuredproject />} />
           <Route path="Presentprojects" element={<Presentprojects />} />
         </Route>
-
         <Route path="*" element={<Notfound />} />
-
         <Route path="/users" element={<Users />} />
-
         <Route
           path="/users/:userid"
           element={
@@ -59,14 +54,15 @@ const App = () => {
             </PrivateRoute>
           }
         />
-
         <Route path="/Drinks" element={<Drinks />} />
         <Route path="/Drinks/:cooldrink" element={<Drinkslist />} />
-
         <Route path="/Login" element={<Login />} />
         <Route path="/Logout" element={<Logout />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/Shopee" element={<Shophome />} />
+        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/cart" element={<CartDetail />} />
       </Routes>
+      <Cart />
     </UserAuthContextProvider>
   );
 };

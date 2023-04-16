@@ -1,0 +1,41 @@
+.about-para {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+  /* margin-top: 2rem; */
+  position: relative;
+  /* background-color: blue; */
+}
+
+//shopee
+
+.fixed {
+  position: fixed;
+}
+
+$darkGray: #333;
+$lightGray: #555;
+$bg-lightGray: #f5f5f5;
+$bg-lighterGray: #f7f7f7;
+$bg-darkGray: #2a2a2a;
+$darkestGray: #010101;
+$lighterGray: #b7b7b7;
+$gray: #c2c2c2;
+$gray-2: #999;
+$cream: #e7c17e;
+$lightestGray: #e2e2e2;
+$lightestGray-2: #f2f2f2;
+$black: #000;
+$white: #fff;
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $lighterGray;
+}

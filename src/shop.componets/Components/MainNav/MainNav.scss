@@ -1,0 +1,95 @@
+@import "../../../App.scss";
+
+.main-nav {
+  display: flex;
+  padding: 1rem 1rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.bg-w {
+  background-color: #fff;
+}
+.bg-g {
+  background-color: $bg-lightGray;
+}
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.9rem;
+  font-weight: 600;
+  order: -1;
+  color: $darkGray;
+}
+
+.nav {
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  order: -2;
+  list-style: none;
+  gap: 12rem;
+}
+
+.nav li.menu-bars {
+  float: right;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+}
+
+.nav li:not(last-child) {
+  display: none;
+}
+
+.nav li {
+  margin: 1rem 1rem;
+  font-weight: 600;
+  color: $lightGray;
+}
+.nav li a:visited {
+  color: inherit;
+}
+.menu-bars {
+  display: none;
+  color: $darkGray;
+  font-size: 1.5rem;
+}
+
+.cart-menu {
+  order: 2;
+}
+
+@media screen and (min-width: 900px) {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .logo {
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin: 0;
+    order: 0;
+  }
+  .nav {
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    order: 0;
+    display: flex;
+  }
+  .nav li:last-child {
+    display: none;
+  }
+  .nav li:not(last-child) {
+    display: block;
+  }
+  div .cart-menu {
+    order: 2;
+  }
+  .cart-menu li:last-child {
+    display: block;
+  }
+}

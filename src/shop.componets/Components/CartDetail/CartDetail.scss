@@ -1,0 +1,99 @@
+@import "../../../App.scss";
+
+.cart-detail-header {
+  background: url("https://cdn.shopify.com/s/files/1/0304/5739/7386/files/bg_collection.jpg?v=1613680507")
+    center;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.cart-h3 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: $darkGray;
+  border-bottom: 1px solid $cream;
+  padding-bottom: 5px;
+}
+
+.cart-span {
+  font-size: 0.8rem;
+  color: $lightGray;
+}
+.cart-detail {
+  margin: 2rem 0rem;
+}
+.total-price {
+  margin: 4rem 2rem 1rem 2rem;
+  border: 1px solid $lightestGray;
+  padding: 3rem 2rem;
+}
+.total-price p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $darkGray;
+}
+.price-span {
+  margin-left: 12rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: $black;
+}
+.checkout-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1.3rem;
+  background-color: $cream;
+  color: #fff;
+  text-align: center;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+.checkout-btn:hover {
+  background-color: $bg-darkGray;
+}
+.explanation {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: $lightGray;
+  display: block;
+  margin-top: 1rem;
+  letter-spacing: normal;
+}
+.empty {
+  text-align: center;
+  margin: 10rem;
+}
+.empty-cart-span {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.empty-cart-btn {
+  padding: 1rem 3rem;
+  background-color: $black;
+  color: $white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.table-title {
+  display: none;
+}
+@media screen and (min-width: 400px) {
+  .cart-detail {
+    margin: 2rem 1rem;
+  }
+}
+@media screen and (min-width: 550px) {
+  .table-title {
+    display: flex;
+  }
+}
+@media screen and (min-width: 800px) {
+  .cart-detail {
+    margin: 5rem 8rem;
+  }
+}

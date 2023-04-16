@@ -1,0 +1,20 @@
+@import "../../../App.scss";
+
+.products {
+  margin: 1rem 0rem;
+}
+
+.products-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,28 @@
+@import "../../../App.scss";
+
+.cart-menu {
+  list-style: none;
+  display: flex;
+  color: $lightGray;
+  margin-block-start: 0rem;
+  margin-block-end: 0em;
+  padding-inline-start: 0px;
+}
+
+.cart-menu li {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.cart-icon {
+  position: relative;
+  color: white;
+}
+.badge {
+  left: 1.5rem;
+  padding: 0.1rem 0.4rem 0.1rem 0.5rem;
+  background-color: $cream;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.8rem;
+}
