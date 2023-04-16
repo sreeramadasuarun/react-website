@@ -53,12 +53,6 @@ const CartDetail = () => {
                 TOTAL <span className="price-span">{totalPrice}$</span>
               </p>
               <p className="checkout-btn">PROCEED TO CHECKOUT</p>
-              <span className="explanation">
-                Ceratin - Pottery And Ceramics Handmade Shopify Theme Processes
-                All Orders In USD. While The Content Of Your Cart Is Currently
-                Displayed In USD, The Checkout Will Use USD At The Most Current
-                Exchange Rate.
-              </span>
             </div>
           ) : (
             ""
