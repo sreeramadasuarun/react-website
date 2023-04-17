@@ -39,21 +39,21 @@ const App = () => {
           }
         />
         <Route path="/Success" element={<Success />} />
-        <Route path="/Shop" element={<Shop />} />
+        <Route
+          path="/Shop"
+          element={
+            <PrivateRoute>
+              <Shop />
+            </PrivateRoute>
+          }
+        />
         <Route path="/Projects" element={<Projects />}>
           <Route path="Featuredproject" element={<Featuredproject />} />
           <Route path="Presentprojects" element={<Presentprojects />} />
         </Route>
-        <Route path="*" element={<Notfound />} />
+        <Route path="#" element={<Notfound />} />
         <Route path="/users" element={<Users />} />
-        <Route
-          path="/users/:userid"
-          element={
-            <PrivateRoute>
-              <Userdetails />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/users/:userid" element={<Userdetails />} />
         <Route path="/Drinks" element={<Drinks />} />
         <Route path="/Drinks/:cooldrink" element={<Drinkslist />} />
         <Route path="/Login" element={<Login />} />
@@ -62,6 +62,7 @@ const App = () => {
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/cart" element={<CartDetail />} />
       </Routes>
+
       <Cart />
     </UserAuthContextProvider>
   );

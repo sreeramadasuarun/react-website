@@ -30,7 +30,7 @@ const Navlinks = () => {
     e.preventDefault();
     try {
       await googleSignIn();
-      navigate("/home");
+      navigate("/Shop");
     } catch (error) {
       console.log(error.message);
     }
@@ -58,7 +58,7 @@ const Navlinks = () => {
           </li>
 
           <li>
-            <a href="*" className="desktop-item">
+            <a href="#" className="desktop-item">
               Work +
             </a>
             <input type="checkbox" id="showMega" />
@@ -156,11 +156,6 @@ const Navlinks = () => {
               </li>
             </ul>
           </li>
-          {/* <li>
-            <NavLink to="/">
-              cart <FaShoppingCart />
-            </NavLink>
-          </li> */}
           <li>
             <CartMenu />
           </li>
