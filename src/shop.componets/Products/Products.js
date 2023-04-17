@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { AppContext } from "../../AppContext";
+import { AppContext } from "../AppContext";
 import Product from "../Product/Product";
 import "./Products.scss";
 
@@ -26,7 +26,7 @@ const Products = () => {
 
   return (
     <div className="products" id="shop">
-      <div className="products-list">
+      <div className="products-grid">
         {products.map((item, index) => (
           <Product
             key={index}

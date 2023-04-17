@@ -4,6 +4,13 @@
   font-size: 2rem;
   font-weight: 500;
   color: $darkGray;
-  margin-block-end: 0.5em;
-  margin: 2rem 1.3rem 0;
+  text-align: center;
+  padding: 3rem;
+}
+.shopee-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--clr-white);
+  position: fixed;
+  z-index: -100;
 }

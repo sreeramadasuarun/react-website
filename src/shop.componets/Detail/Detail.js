@@ -1,24 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AppContext } from "../../AppContext";
+import { AppContext } from "../AppContext";
 import { useLocation, useParams } from "react-router-dom";
 import { VscTriangleDown, VscTriangleUp } from "react-icons/vsc";
-import {
-  FaRegHeart,
-  FaTwitter,
-  FaPinterestP,
-  FaFacebookF,
-} from "react-icons/fa";
 import "./Detail.scss";
 
 const Detail = () => {
   const { cartContext } = useContext(AppContext);
   const [cart, setCart] = cartContext;
-  const [category, setCategory] = useState("");
 
   const [product, setProduct] = useState({});
   const { id } = useParams();
   const [counter, setCounter] = useState(1);
-  const [localFlag, setLocalFlag] = useState(false);
 
   const location = useLocation();
   if (location.pathname.includes("/detail")) {
@@ -31,10 +23,7 @@ const Detail = () => {
   };
   useEffect(() => {
     getProduct();
-    if (product.category) {
-      setCategory(product.category.name);
-    }
-  }, [product]);
+  }, []);
 
   const addToCart = () => {
     if (counter > 0) {
@@ -55,15 +44,10 @@ const Detail = () => {
         tempCart[productIndex].count += counter;
         setCart(tempCart);
       }
-      setLocalFlag(!localFlag);
     }
   };
 
-  useEffect(() => {
-    if (localFlag) {
-      setLocalFlag(!localFlag);
-    }
-  }, [localFlag]);
+  // const { title, price, description, category } = product;
 
   return (
     <div className="detail">
@@ -80,8 +64,8 @@ const Detail = () => {
           <hr className="hr" />
           <p>{product.description}</p>
           <div className="add-to-cart">
-            <div className="add-button">
-              <p onClick={addToCart}>ADD TO CART</p>
+            <div onClick={addToCart} className="add-button">
+              <span>ADD TO CART</span>
             </div>
             <div className="counter">
               {counter}
@@ -103,22 +87,14 @@ const Detail = () => {
               </div>
             </div>
           </div>
-          <div className="add-to-wish">
-            <FaRegHeart className="heart" />
-            <span>ADD TO WISHLIST</span>
-          </div>
           <div className="categories">
-            <span className="cat-title">Categories :{category}</span>
-          </div>
-          <div className="share">
-            <span className="share-title">SHARE :</span>
-            <FaTwitter className="share-btns" />
-            <FaFacebookF className="share-btns" />
-            <FaPinterestP className="share-btns" />
+            <p className="cat-title">
+              Categories :{" "}
+              <span className="cat-product">{product.category}</span>
+            </p>
           </div>
         </div>
       </div>
-
       <hr className="hr" />
       {/* <div className="latest-products">
         <h2 className="latest-products-title">LATEST PRODUCTS</h2>

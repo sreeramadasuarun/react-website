@@ -1,4 +1,4 @@
-@import "../../../App.scss";
+@import "../../App.scss";
 
 .cart-menu {
   list-style: none;
@@ -21,7 +21,7 @@
 .badge {
   left: 1.5rem;
   padding: 0.1rem 0.4rem 0.1rem 0.5rem;
-  background-color: $cream;
+  background-color: black;
   border-radius: 10px;
   color: #fff;
   font-size: 0.8rem;

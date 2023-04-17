@@ -1,0 +1,80 @@
+@import "../../App.scss";
+
+.pro:hover .btn-list {
+  transform: translate(0rem);
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+
+.pro {
+  position: relative;
+  background-color: var(--clr-white);
+  text-align: center;
+  padding: 1rem 0;
+  display: flex;
+  // max-width: 21rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 13px;
+
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.btn-list:hover {
+  background-color: $cream;
+}
+.btn-list {
+  position: relative;
+  background-color: $black;
+  padding: 0.5rem 2.5rem;
+  border-radius: 10px;
+  color: $white;
+  transform: translate(0.5rem);
+  transition: all 0.5s linear;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0 0 4px 2px #00000022;
+  cursor: pointer;
+}
+
+.product-title {
+  color: $lightGray;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+.product-title:hover {
+  color: $darkestGray;
+  font-weight: 500;
+  cursor: pointer;
+}
+.product-price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #212529;
+}
+.text-left {
+  text-align: left;
+}
+.btn-list :hover {
+  visibility: visible;
+  transform: translateY(0rem);
+  background-color: $cream;
+  color: #fff;
+}
+
+.img-box img {
+  border-radius: 1rem;
+  width: 15rem;
+  height: 10rem;
+  text-align: center;
+  mix-blend-mode: multiply;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5rem;
+}

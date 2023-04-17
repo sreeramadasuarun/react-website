@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import "./Product.scss";
-import { AppContext } from "../../AppContext";
+import { AppContext } from "../AppContext";
 import { Link } from "react-router-dom";
 
-const Product = ({ id, firstImg, title, price }) => {
+const Product = ({ id, firstImg, title, price, category }) => {
   const { cartContext } = useContext(AppContext);
   const [cart, setCart] = cartContext;
 
@@ -12,7 +12,14 @@ const Product = ({ id, firstImg, title, price }) => {
     if (productIndex < 0) {
       setCart([
         ...cart,
-        { id: id, img: firstImg, title: title, price: price, count: 1 },
+        {
+          id: id,
+          img: firstImg,
+          title: title,
+          price: price,
+          categories: category,
+          count: 1,
+        },
       ]);
     } else {
       let tempCart = [...cart];
@@ -22,16 +29,18 @@ const Product = ({ id, firstImg, title, price }) => {
   };
 
   return (
-    <div className="product">
-      <div className="img-box">
-        <img alt="notfound" src={firstImg} />
-      </div>
+    <div className="pro">
       <Link to={`/detail/${id}`}>
-        <h4 className="product-title">{title.slice(0, 20)}</h4>
+        <div className="img-box">
+          <img alt="notfound" src={firstImg} />
+        </div>
+        <div className="text-left">
+          <h4 className="product-title">{title.slice(0, 20)}</h4>
+          <span className="product-price">{price + "$"}</span>
+        </div>
       </Link>
-      <span className="product-price">{price + "$"}</span>
       <p className="btn-list" onClick={addToCart}>
-        add to cart
+        Add to Cart
       </p>
     </div>
   );

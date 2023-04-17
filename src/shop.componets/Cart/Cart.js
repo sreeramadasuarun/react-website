@@ -1,20 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Cart.scss";
 import { VscChromeClose } from "react-icons/vsc";
-import { AppContext } from "../../AppContext";
+import { AppContext } from "../AppContext";
 import CartItem from "../CartItem/CartItem";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cartContext, showCart, cartTotalPrice } = useContext(AppContext);
   const [cartState, setCartState] = showCart;
-  const [cart] = cartContext;
+  const [cart, setCart] = cartContext;
   const [totalPrice, setTotalPrice] = cartTotalPrice;
   const navigate = useNavigate();
 
   const closeCart = () => {
     setCartState(false);
-    navigate("/");
   };
   const viewCartDetail = () => {
     setCartState(false);
@@ -22,6 +21,7 @@ const Cart = () => {
   };
 
   let total = 0;
+
   cart.map((item) => {
     total += item.price * item.count;
     setTotalPrice(total);
@@ -45,19 +45,21 @@ const Cart = () => {
           </p>
         </div>
       ) : (
-        cart.map((item, index) => {
-          return (
-            <div key={index}>
-              <CartItem
-                title={item.title}
-                price={item.price}
-                img={item.img}
-                id={item.id}
-                count={item.count}
-              />
-            </div>
-          );
-        })
+        <div className="cart-scroll">
+          {cart.map((item, index) => {
+            return (
+              <div key={index}>
+                <CartItem
+                  title={item.title}
+                  price={item.price}
+                  img={item.img}
+                  id={item.id}
+                  count={item.count}
+                />
+              </div>
+            );
+          })}
+        </div>
       )}
       <div className="cart-bottom-reletive">
         <div className="cart-bottom">

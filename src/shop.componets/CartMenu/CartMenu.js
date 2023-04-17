@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import "../../Components/CartMenu/CartMenu.scss";
+import "../CartMenu/CartMenu.scss";
 import { FiShoppingCart } from "react-icons/fi";
-import { AppContext } from "../../AppContext";
+import { AppContext } from "../AppContext";
 
 const CartMenu = () => {
   const { showCart, cartContext } = useContext(AppContext);

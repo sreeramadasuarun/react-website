@@ -1,7 +1,13 @@
 import React, { useContext } from "react";
 import "./CartItem.scss";
-import { VscChevronUp, VscChevronDown } from "react-icons/vsc";
-import { AppContext } from "../../AppContext";
+import {
+  VscChevronUp,
+  VscChevronDown,
+  VscAdd,
+  VscChromeMinimize,
+} from "react-icons/vsc";
+
+import { AppContext } from "../AppContext";
 import { Link, useNavigate } from "react-router-dom";
 
 const CartItem = (props) => {
@@ -47,12 +53,12 @@ const CartItem = (props) => {
             <h3 onClick={goToDetailPage}>{props.title}</h3>
             <p>{props.price}$</p>
             <div className="addRemove">
-              <span className="addRemove-btn">
-                <VscChevronDown onClick={removeItem} />
+              <span onClick={removeItem} className="addRemove-btn">
+                <VscChromeMinimize />
               </span>
               <span className="count">{props.count}</span>
-              <span className="addRemove-btn">
-                <VscChevronUp onClick={addItem} />
+              <span onClick={addItem} className="addRemove-btn">
+                <VscAdd />
               </span>
             </div>
           </div>
@@ -73,12 +79,12 @@ const CartItem = (props) => {
           </div>
           <p className="cart-detail-price">{props.price}$</p>
           <div className="addRemove-detail">
-            <span className="addRemove-btn">
-              <VscChevronDown onClick={removeItem} />
+            <span onClick={removeItem} className="addRemove-btn">
+              <VscChromeMinimize />
             </span>
             <span className="count">{props.count}</span>
-            <span className="addRemove-btn">
-              <VscChevronUp onClick={addItem} />
+            <span onClick={addItem} className="addRemove-btn">
+              <VscAdd />
             </span>
           </div>
           <p className="cart-detail-price">{props.count * props.price}$</p>

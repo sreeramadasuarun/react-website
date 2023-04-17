@@ -5,7 +5,7 @@ import { useUserAuth } from "../../login/UserAuthContext";
 import myimage from "../../assets/images/myimage.jpg";
 import { useNavigate } from "react-router-dom";
 // import { FaShoppingCart } from "react-icons/fa";
-import CartMenu from "../../shop.componets/Components/CartMenu/CartMenu";
+import CartMenu from "../../shop.componets/CartMenu/CartMenu";
 
 const Navlinks = () => {
   const navigate = useNavigate();

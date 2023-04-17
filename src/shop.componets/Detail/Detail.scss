@@ -1,4 +1,4 @@
-@import "../../../App.scss";
+@import "../../App.scss";
 
 .detail {
   display: flex;
@@ -92,12 +92,13 @@
 }
 
 .add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $black;
   padding: 0.6rem 4rem;
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 600;
-
+  color: rgb(255, 255, 255);
+  font-weight: 300;
   letter-spacing: 0.2rem;
   cursor: pointer;
   text-align: center;
@@ -163,11 +164,17 @@
   color: $cream;
 }
 
-.cat-title {
+.cat-product {
   color: $black;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   letter-spacing: normal;
 }
+.cat-title {
+  color: $lightGray;
+  font-size: 1.2rem;
+  letter-spacing: normal;
+}
+
 .share {
   margin-top: 0.9rem;
   display: flex;
@@ -212,11 +219,11 @@
   transition: all 0.5s;
 }
 .tabs ul li:hover {
-  background-color: $cream;
+  // background-color: $cream;
   color: $white;
 }
 .active {
-  background-color: $cream;
+  // background-color: $cream;
   color: $white;
 }
 .active a {

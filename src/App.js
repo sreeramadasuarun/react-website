@@ -18,9 +18,9 @@ import PrivateRoute from "./login/PrivateRoute";
 import Portfolio from "./Componets/portfolio/portfolio";
 import Shop from "./Componets/shopsite/shop.js";
 import Shophome from "./shopee/Shopee";
-import Cart from "./shop.componets/Components/Cart/Cart";
-import Detail from "./shop.componets/Components/Detail/Detail";
-import CartDetail from "./shop.componets/Components/CartDetail/CartDetail";
+import Cart from "./shop.componets/Cart/Cart";
+import Detail from "./shop.componets/Detail/Detail";
+import CartDetail from "./shop.componets/CartDetail/CartDetail";
 
 const Lazyabout = React.lazy(() => import("./Componets/tabs/About"));
 

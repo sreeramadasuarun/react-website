@@ -1,4 +1,4 @@
-@import "../../../App.scss";
+@import "../../App.scss";
 
 .cart {
   position: fixed;
@@ -77,6 +77,10 @@
   margin: 2rem;
   border-bottom: 1px solid $lightestGray;
 }
+
+.cart-bottom {
+  position: fixed;
+}
 .cart-item-img {
   flex: 0 0 30%;
   margin-bottom: 1rem;
@@ -112,7 +116,11 @@ img {
   width: 100%;
   bottom: 0;
 }
-
+.cart-scroll {
+  overflow: scroll;
+  width: 31rem;
+  height: 41rem;
+}
 .cart-total {
   background-color: #fff;
 
