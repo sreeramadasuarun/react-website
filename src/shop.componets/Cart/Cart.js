@@ -14,6 +14,7 @@ const Cart = () => {
 
   const closeCart = () => {
     setCartState(false);
+    navigate("/Shopee");
   };
   const viewCartDetail = () => {
     setCartState(false);
@@ -40,7 +41,7 @@ const Cart = () => {
           <span className="empty-cart-span">Your shopping bag is empty</span>
           <br />
           <p className="empty-cart-btn" onClick={closeCart}>
-            Go To The Shop
+            Go To The Shopee
           </p>
         </div>
       ) : (

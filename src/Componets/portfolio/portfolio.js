@@ -155,7 +155,7 @@ const Portfolio = () => {
       </section>
       <footer>
         <p> * All the projects and contact details given are real. </p>
-        <p> & copy; Design inspired by freeCodeCamp </p>
+        <p> © Design inspired by freeCodeCamp </p>
       </footer>
     </div>
   );

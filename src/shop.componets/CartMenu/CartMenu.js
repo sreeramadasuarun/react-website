@@ -21,7 +21,7 @@ const CartMenu = () => {
     <div>
       <ul className="cart-menu">
         <li className="cart-icon">
-          <FiShoppingCart onClick={openCart} />
+          <FiShoppingCart onMouseOver={openCart} />
           <span className="badge">{total}</span>
         </li>
       </ul>

@@ -65,10 +65,10 @@ const CartDetail = () => {
           <a
             className="empty-cart-btn"
             onClick={() => {
-              navigate("/");
+              navigate("/Shopee");
             }}
           >
-            Go To Shop
+            Go To Shopee
           </a>
         </div>
       )}

@@ -97,6 +97,9 @@ const CartItem = (props) => {
             <span onClick={addItem} className="addRemove-btn">
               <VscAdd />
             </span>
+            <div className="delete-cart" onClick={() => handleDelete(props.id)}>
+              Delete <VscChromeClose />
+            </div>
           </div>
           <p className="cart-detail-price">{props.count * props.price}$</p>
         </div>
