@@ -35,7 +35,9 @@ const Product = ({ id, firstImg, title, price, category }) => {
           <img alt="notfound" src={firstImg} />
         </div>
         <div className="text-left">
-          <h4 className="product-title">{title.slice(0, 20)}</h4>
+          <h4 className="product-title">
+            {title.split(" ").slice(0, 3).join(" ")}
+          </h4>
           <span className="product-price">{price + "$"}</span>
         </div>
       </Link>

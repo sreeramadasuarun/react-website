@@ -13,7 +13,7 @@ nav {
     #ff8033,
     #d74177
   );
-  animation: 12s myGradient infinite;
+  animation: 5s myGradient infinite;
 }
 
 @keyframes myGradient {

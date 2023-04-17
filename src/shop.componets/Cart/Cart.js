@@ -21,7 +21,6 @@ const Cart = () => {
   };
 
   let total = 0;
-
   cart.map((item) => {
     total += item.price * item.count;
     setTotalPrice(total);

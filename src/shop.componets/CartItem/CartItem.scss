@@ -55,7 +55,21 @@ img {
 .count {
   margin: 0.5rem;
 }
-
+.delete-cart {
+  background-color: $darkGray;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+  width: 7rem;
+  margin-top: 0.8rem;
+  border-radius: 5px;
+}
+.delete-cart:hover {
+  background-color: red;
+  color: $white;
+}
 .cart-detail-item {
   display: flex;
   flex-wrap: wrap;

@@ -8,7 +8,6 @@ export const AppProvider = (props) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [products, setProducts] = useState([]);
   const [leftmenu, setLeftmenu] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState({ id: -1 });
 
   return (
     <AppContext.Provider
@@ -18,7 +17,6 @@ export const AppProvider = (props) => {
         cartTotalPrice: [totalPrice, setTotalPrice],
         productsContext: [products, setProducts],
         leftmenuState: [leftmenu, setLeftmenu],
-        quickview: [selectedProduct, setSelectedProduct],
       }}
     >
       {props.children}

@@ -6,7 +6,7 @@ import "./CartDetail.scss";
 const CartDetail = () => {
   const { cartContext, cartTotalPrice } = useContext(AppContext);
   const [cart, setCart] = cartContext;
-  const [totalPrice] = cartTotalPrice;
+  const [totalPrice, setTotalPrice] = cartTotalPrice;
   const navigate = useNavigate();
 
   return (
