@@ -5,8 +5,8 @@ import CartItem from "../CartItem/CartItem";
 import "./CartDetail.scss";
 const CartDetail = () => {
   const { cartContext, cartTotalPrice } = useContext(AppContext);
-  const [cart, setCart] = cartContext;
-  const [totalPrice, setTotalPrice] = cartTotalPrice;
+  const [cart] = cartContext;
+  const [totalPrice] = cartTotalPrice;
   const navigate = useNavigate();
 
   return (

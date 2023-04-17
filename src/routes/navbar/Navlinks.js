@@ -30,7 +30,7 @@ const Navlinks = () => {
     e.preventDefault();
     try {
       await googleSignIn();
-      navigate("/Shop");
+      navigate("/Shopee");
     } catch (error) {
       console.log(error.message);
     }

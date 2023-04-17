@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import "./Cart.scss";
 import { VscChromeClose } from "react-icons/vsc";
 import { AppContext } from "../AppContext";
@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const { cartContext, showCart, cartTotalPrice } = useContext(AppContext);
   const [cartState, setCartState] = showCart;
-  const [cart, setCart] = cartContext;
+  const [cart] = cartContext;
   const [totalPrice, setTotalPrice] = cartTotalPrice;
   const navigate = useNavigate();
 
