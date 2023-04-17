@@ -107,34 +107,50 @@ const Portfolio = () => {
           Show all <i className="fa fa-chevron-right"> </i>
         </a>
       </section>
+
       <section id="contact" className="contact-section">
-        <div className="contact-section-header">
-          <h2 className="contact-head"> Let 's work together...</h2>
-          <p> Follow me on </p>
-        </div>
-        <div className="contact-links">
-          <a
-            href="https://www.linkedin.com/in/sreeramadasu-arun-7171621b7/"
-            target="blank"
-            className="sociallinks contact-details"
-          >
-            <i className="fa fa-linkedin"> </i> Linkedin
-          </a>
-          <a
-            id="profile-link"
-            href="https://github.com/sreeramadasuarun"
-            target="blank"
-            className="sociallinks contact-details"
-          >
-            <i className="fa fa-github"> </i> GitHub
-          </a>
-          <a
-            href="https://www.behance.net/sreeramadasuarun"
-            className="sociallinks contact-details"
-            target="blank"
-          >
-            <i className="fa fa-behance"> </i> Behance
-          </a>
+        <div className="area">
+          <div className="contact-section-header">
+            <span className="contact-head"> Let 's work together...</span>
+            <br />
+            <span> Follow me on </span>
+          </div>
+          <div className="contact-links">
+            <a
+              href="https://www.linkedin.com/in/sreeramadasu-arun-7171621b7/"
+              target="blank"
+              className="sociallinks contact-details"
+            >
+              <i className="fa fa-linkedin"> </i> Linkedin
+            </a>
+            <a
+              id="profile-link"
+              href="https://github.com/sreeramadasuarun"
+              target="blank"
+              className="sociallinks contact-details"
+            >
+              <i className="fa fa-github"> </i> GitHub
+            </a>
+            <a
+              href="https://www.behance.net/sreeramadasuarun"
+              className="sociallinks contact-details"
+              target="blank"
+            >
+              <i className="fa fa-behance"> </i> Behance
+            </a>
+          </div>
+          <ul className="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </section>
       <footer>
