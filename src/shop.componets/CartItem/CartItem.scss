@@ -164,3 +164,19 @@ img {
     flex: 0 0 30%;
   }
 }
+@media only screen and (max-width: 775px) {
+  .cart-item-img {
+    flex: 0 0 16%;
+  }
+
+  .cart-item-info {
+    flex: 0 0 30%;
+    padding-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  .cart-detail-item-img {
+    flex: 0 0 20%;
+  }
+}

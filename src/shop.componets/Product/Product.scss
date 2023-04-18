@@ -76,3 +76,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5rem;
 }
+@media only screen and (max-width: 775px) {
+  .products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}

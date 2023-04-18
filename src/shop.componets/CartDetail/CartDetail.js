@@ -11,9 +11,22 @@ const CartDetail = () => {
 
   return (
     <div>
-      <div className="cart-detail-header">
-        <h3 className="cart-h3">Cart</h3>
+      <div className="area1">
+        <span className="text-cart">Cart</span>
+        <ul className="circles1">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
+
       {totalPrice != 0 ? (
         <div className="cart-detail">
           <div className="cart-detail-item table-title">
