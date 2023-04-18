@@ -6,28 +6,6 @@
   }
 }
 
-.usercard {
-  background-color: rgb(165, 200, 244);
-  padding: 40px;
-  color: rgb(6, 6, 79);
-}
-
-.userson {
-  display: grid;
-  grid-template-columns: 2fr;
-}
-
-.allusercard a {
-  text-decoration: none;
-}
-
-@media screen and (min-width: 992px) {
-  .userson {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-  }
-}
-
 .drinks-container a {
   text-decoration: none;
 }

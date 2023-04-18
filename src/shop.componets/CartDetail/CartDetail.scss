@@ -1,27 +1,5 @@
 @import "../../App.scss";
 
-.cart-detail-header {
-  background: url("https://cdn.shopify.com/s/files/1/0304/5739/7386/files/bg_collection.jpg?v=1613680507")
-    center;
-  height: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-.cart-h3 {
-  font-size: 2.8rem;
-  font-weight: 300;
-  color: $darkGray;
-  border-bottom: 1px solid $cream;
-  padding-bottom: 5px;
-}
-
-.cart-span {
-  font-size: 0.8rem;
-  color: $lightGray;
-}
 .cart-detail {
   margin: 2rem 0rem;
 }
