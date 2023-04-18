@@ -115,9 +115,9 @@ export const GoogleButton = styled.button`
   border: none;
   background-color: #4285f4;
   color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 10px 45px;
+  font-size: 10px;
+  font-weight: 300;
+  padding: 10px 40px;
   margin: 1rem 0;
   letter-spacing: 1px;
   text-transform: uppercase;

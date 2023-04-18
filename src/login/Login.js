@@ -68,6 +68,9 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <Components.Button>Sign Up</Components.Button>
+            <Components.GoogleButton onClick={handleGoogleSignIn}>
+              SignUp With Google
+            </Components.GoogleButton>
             {error && <p className="red-error">{error}</p>}
           </Components.Form>
         </Components.SignUpContainer>
