@@ -78,7 +78,7 @@ const Navlinks = () => {
                         <NavLink to="/Shop">Shop Site</NavLink>
                       </li>
                       <li>
-                        <NavLink to="*">lorem</NavLink>
+                        <NavLink to="/spline3d">spline</NavLink>
                       </li>
                       <li>
                         <NavLink to="*">lorem</NavLink>

@@ -21,6 +21,7 @@ import Shophome from "./shopee/Shopee";
 import Cart from "./shop.componets/Cart/Cart";
 import Detail from "./shop.componets/Detail/Detail";
 import CartDetail from "./shop.componets/CartDetail/CartDetail";
+import Spline3d from "./Componets/spline/spline3d.js";
 
 const Lazyabout = React.lazy(() => import("./Componets/tabs/About"));
 
@@ -61,6 +62,7 @@ const App = () => {
         <Route path="/Shopee" element={<Shophome />} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/cart" element={<CartDetail />} />
+        <Route path="/spline3d" element={<Spline3d />} />
       </Routes>
 
       <Cart />

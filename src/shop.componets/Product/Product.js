@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import "./Product.scss";
 import { AppContext } from "../AppContext";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Product = ({ id, firstImg, title, price, category }) => {
   const { cartContext } = useContext(AppContext);
@@ -26,8 +28,12 @@ const Product = ({ id, firstImg, title, price, category }) => {
       tempCart[productIndex].count++;
       setCart(tempCart);
     }
+    // document.getElementById("addedButton").textContent = "added to cart";
+    toast("Added to Cart");
+    console.log(cart);
   };
-
+  console.log(cart);
+  console.log(cartContext);
   return (
     <div className="pro">
       <Link to={`/detail/${id}`}>
@@ -41,9 +47,21 @@ const Product = ({ id, firstImg, title, price, category }) => {
           <span className="product-price">{price + "$"}</span>
         </div>
       </Link>
-      <p className="btn-list" onClick={addToCart}>
+      <p className="btn-list" id="addedButton" onClick={addToCart}>
         Add to Cart
       </p>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };

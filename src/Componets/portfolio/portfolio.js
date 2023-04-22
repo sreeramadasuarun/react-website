@@ -22,7 +22,6 @@ const Portfolio = () => {
           <li></li>
         </ul>
       </div>
-
       <section id="projects" className="projects-section">
         <h1> My Portfolio </h1>
         <div className="projects-grid">

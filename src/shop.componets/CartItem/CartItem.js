@@ -49,7 +49,7 @@ const CartItem = (props) => {
   };
   return (
     <div>
-      {!props.flag ? (
+      {!props ? (
         <div className="cart-item">
           <div className="cart-item-img">
             <img alt="notfound" src={props.img} onClick={goToDetailPage} />
